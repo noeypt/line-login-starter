@@ -136,7 +136,8 @@ public class LineAPIService {
     }
 
     private <R> R getClient(final Function<LineAPI, Call<R>> function) {
-        return Client.getClient("https://api.line.me/", LineAPI.class, function);
+        return Client.getClient("https://api.line-beta.me/", LineAPI.class, function);
+        //return Client.getClient("https://api.line.me/", LineAPI.class, function);
     }
 
 }
