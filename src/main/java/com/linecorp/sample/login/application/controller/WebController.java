@@ -119,12 +119,12 @@ public class WebController {
 
         AccessToken token = (AccessToken)httpSession.getAttribute(ACCESS_TOKEN);
         if (token == null){
-            return "redirect:/";
+            return "redirect:/aaa";
         }
 
         if (!lineAPIService.verifyIdToken(token.id_token, (String) httpSession.getAttribute(NONCE))) {
             // verify failed
-            return "redirect:/";
+            return "redirect:/bbb";
         }
 
         httpSession.removeAttribute(NONCE);
